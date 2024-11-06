@@ -43,13 +43,12 @@ uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["cs
 
 if uploaded_file is not None:
     input_data = pd.read_csv(uploaded_file)
-    st.markdown("<h1 style='text-align: center; '>Unsupervised Learning YYYYY</h1>", unsafe_allow_html=True) #YYYYY diisi dengan nama panggilan
+    st.markdown("<h1 style='text-align: center; '>Unsupervised Learning 11899</h1>", unsafe_allow_html=True) #YYYYY diisi dengan nama panggilan
     st.dataframe(input_data)
-    model_directory = r'D:\Semester 5\Pembelajaran Mesin\Tugas4_C_11899'
     model_path = {
-        "AGG_model" : os.path.join(model_directory, r'AGG_model.pkl'),
-        "KMeans_model": os.path.join(model_directory, r'KMeans_model.pkl'),
-        "DBSCAN_model" : os.path.join(model_directory, r'DBSCAN_model.pkl'),
+        "AGG_model" : r'AGG_model.pkl',
+        "KMeans_model": r'KMeans_model.pkl',
+        "DBSCAN_model" : r'DBSCAN_model.pkl',
     }
     models = {}
     for model_name, path in model_path.items():
